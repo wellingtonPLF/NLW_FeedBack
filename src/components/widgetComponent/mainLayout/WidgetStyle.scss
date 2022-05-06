@@ -1,0 +1,12 @@
+
+.mainPopover {
+    @apply absolute bottom-4 right-4 flex flex-col items-end md:bottom-10 md:right-10;
+}
+
+.popoverBtn {
+    @apply rounded-full px-3 h-12 text-white flex items-center;
+}
+
+.popoverBtnChild {
+    @apply max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-linear;
+}
