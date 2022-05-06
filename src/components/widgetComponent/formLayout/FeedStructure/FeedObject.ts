@@ -1,6 +1,6 @@
-import bugImageUrl from '../../../assets/img/bug.svg'
-import ideaImageUrl from '../../../assets/img/idea.svg';
-import thoughtImageUrl from '../../../assets/img/thought.svg';
+import bugImageUrl from '../../../../assets/img/bug.svg'
+import ideaImageUrl from '../../../../assets/img/idea.svg';
+import thoughtImageUrl from '../../../../assets/img/thought.svg';
 
 const feedBackTypes = {
     BUG: {
