@@ -6,9 +6,10 @@ import { FeedBackType } from './FeedStructure/FeedTypes';
 import ScreenShotComponent from '../../screenShootComponent/ScreenShootScript'
 import { FeedBackTypeStepProps, ScreenShootSaveButtonProps, FeedSuccessProps } from './FeedStructure/InterfaceFeed'
 import FeedSuccessComponent from '../feedSuccessLayout/FeedSuccessScript';
+import LoadComponent from '../../loadComponent/LoadScript';
 
 const FormWidgetView = ({setKeys, getFeedBackType, getFeedArray, restartFeedBack, setMessage, 
-    showSubmit, content, onScreenShootTook, getFeedSent, screenShot} : 
+    showSubmit, content, onScreenShootTook, getFeedSent, screenShot, isFeedLoading} : 
     (FeedBackTypeStepProps & ScreenShootSaveButtonProps & FeedSuccessProps)) => {
     return (
         <>
@@ -60,8 +61,10 @@ const FormWidgetView = ({setKeys, getFeedBackType, getFeedArray, restartFeedBack
             
                                         <div className='flex gap-2 mt-2'>
                                             <ScreenShotComponent screenShot={screenShot} onScreenShootTook={onScreenShootTook}/>
-                                            <button type="submit" disabled={content.length === 0}
-                                            className='buttonFooter bg-brand-500'>Send feedback</button>
+                                            <button type="submit" disabled={content.length === 0 || isFeedLoading}
+                                            className='buttonFooter bg-brand-500'>
+                                                { isFeedLoading ? <LoadComponent /> : 'Send feedback'}
+                                            </button>
                                         </div>
                                     </form>
                                 )

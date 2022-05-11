@@ -10,6 +10,7 @@ export interface FeedBackTypeStepProps {
     showSubmit: (e: FormEvent) => void;
     content: string;
     getFeedSent: boolean;
+    isFeedLoading: boolean;
 }
 
 export interface FeedSuccessProps {
